@@ -12,7 +12,8 @@ const App = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:5000/api/schedule');
+  
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/schedule`);
         setData(response.data);
         setError(null);
       } catch (err) {
@@ -22,7 +23,6 @@ const App = () => {
         setLoading(false);
       }
     };
-
     fetchData();
   }, []);
 
