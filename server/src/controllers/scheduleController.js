@@ -1,4 +1,4 @@
-const scheduleData = require('../../data/data_27.json');
+const scheduleData = require('../../data/data_26-1.json');
 
 const getSchedule = (req, res) => {
   try {
